@@ -3,6 +3,7 @@
 int main() {
     char Torre[10] = "Torre", Rainha[10] = "Rainha", Bispo[10] = "Bispo";
     int escolhaPeca;
+    int j = 0;
 
     do{
         printf("BEM VINDO AO JOGO DE XADREZ!!!");
@@ -10,7 +11,8 @@ int main() {
         printf("1 - Torre\n");
         printf("2 - Rainha\n");
         printf("3 - Bispo\n");
-        printf("4 - Sair do Jogo\n");
+        printf("4 - Cavalo\n");
+        printf("5 - Sair do Jogo\n");
         scanf("%d", &escolhaPeca);
 
 
@@ -45,11 +47,22 @@ int main() {
              break;
 
             case 4:
-              printf("Saindo...");
-              break;
+            printf("Voce Escolheu mover o cavalo!\n");
+             do{
+              for(int i = 0; i<2 ;i++){
+                printf("Baixo!\n");
+              }
+              printf("Esquerda!\n");
+             }while(j > 1);
+             printf("Voce moveu o cavalo 2x para baixo e uma vez para esquerda! \n");
+             break;
+
+            case 5:
+             printf("Saindo...");
+             break;
         }
 
-    }while(escolhaPeca != 4);
+    }while(escolhaPeca != 5);
 
     return 0;
 }
